@@ -22,3 +22,18 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+# ==========================================
+# AI Agent Workflow & Secret Sauce Exclusions
+# ==========================================
+.agents/
+.claude/
+skills.md
+assets-dump/
+
+# Keep standard Next.js and Node exclusions intact
+node_modules/
+.next/
+out/
+build/
+.env*.local
+.DS_Store
