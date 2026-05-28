@@ -1,0 +1,140 @@
+.trainers {
+  padding: 110px 0;
+  background-color: var(--bg-obsidian);
+}
+
+/* ─── Section Header row ─── */
+.trainers-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 56px;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.trainers-title-block h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.call-expert-btn {
+  flex-shrink: 0;
+  padding: 12px 28px;
+  border: 1.5px solid var(--accent-start);
+  border-radius: 6px;
+  color: var(--accent-start);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+  background: transparent;
+}
+
+.call-expert-btn:hover {
+  background: var(--accent-start);
+  color: #000;
+}
+
+/* ─── 6-Pack Grid ─── */
+.trainers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* ─── Card ─── */
+.trainer-card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--surface-card);
+  border: 1px solid var(--surface-border);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.trainer-card:hover {
+  border-color: rgba(255, 87, 34, 0.4);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.55);
+}
+
+/* ─── Image Panel ─── */
+.trainer-image {
+  height: 300px;
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  filter: grayscale(70%);
+  transition: filter 0.4s ease;
+}
+
+.trainer-card:hover .trainer-image {
+  filter: grayscale(0%);
+}
+
+.trainer-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(13,13,13,0.85) 0%, transparent 55%);
+}
+
+.trainer-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+  color: #000;
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+/* ─── Info Panel ─── */
+.trainer-info {
+  padding: 22px 24px 26px;
+  border-top: 1px solid var(--surface-border);
+}
+
+.trainer-info h3 {
+  font-size: 1.35rem;
+  margin-bottom: 6px;
+  color: var(--text-primary);
+  letter-spacing: 0.5px;
+}
+
+.trainer-role {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.trainer-speciality {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 1000px) {
+  .trainers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .trainers-grid {
+    grid-template-columns: 1fr;
+  }
+  .trainers-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

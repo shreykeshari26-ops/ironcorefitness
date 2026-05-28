@@ -1,0 +1,263 @@
+.pricing {
+  padding: 110px 0;
+  background-color: var(--surface-card);
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing::before {
+  content: '';
+  position: absolute;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(ellipse, rgba(255, 87, 34, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ─── Section Header ─── */
+.section-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: var(--accent-start);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.section-sub {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-top: 12px;
+}
+
+/* ─── Grid ─── */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 56px;
+  align-items: start;
+}
+
+/* ─── Card ─── */
+.pricing-card {
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 16px;
+  border: 1px solid var(--surface-border);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover,
+.pricing-card.hovered {
+  border-color: var(--accent-start);
+  box-shadow: 0 0 0 1px rgba(255, 87, 34, 0.5), 0 20px 60px rgba(255, 87, 34, 0.18);
+}
+
+/* Price turns accent gradient on hover */
+.pricing-card.hovered .plan-price,
+.plan-price.price-lit {
+  background: linear-gradient(90deg, var(--accent-start), var(--accent-end));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Icon wrap glows on hover */
+.plan-icon-wrap.icon-active {
+  background: rgba(255, 87, 34, 0.25);
+  border-color: rgba(255, 87, 34, 0.6);
+  box-shadow: 0 0 16px rgba(255, 87, 34, 0.3);
+}
+
+/* Non-popular CTA turns filled on hover */
+.pricing-card.hovered .plan-cta.btn-outline {
+  background: linear-gradient(90deg, var(--accent-start), var(--accent-end));
+  color: #000;
+  border-color: transparent;
+  box-shadow: 0 4px 18px rgba(255, 87, 34, 0.4);
+}
+
+.pricing-card.popular {
+  border-color: var(--accent-start);
+  box-shadow: 0 0 0 1px rgba(255, 87, 34, 0.3), 0 16px 60px rgba(255, 87, 34, 0.15);
+}
+
+/* ─── Popular Badge ─── */
+.popular-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, var(--accent-start), var(--accent-end));
+  color: #000;
+  padding: 5px 18px;
+  border-radius: 30px;
+  font-weight: 800;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+/* ─── Plan Header ─── */
+.plan-header {
+  margin-bottom: 24px;
+}
+
+.plan-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(255, 87, 34, 0.12);
+  border: 1px solid rgba(255, 87, 34, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.plan-icon {
+  color: var(--accent-start);
+}
+
+.plan-name {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.plan-tagline {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* ─── Price ─── */
+.plan-price-block {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 24px;
+}
+
+.plan-price {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.pricing-card.popular .plan-price {
+  background: linear-gradient(90deg, var(--accent-start), var(--accent-end));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.plan-period {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* ─── Divider ─── */
+.plan-divider {
+  height: 1px;
+  background: var(--surface-border);
+  margin-bottom: 24px;
+}
+
+/* ─── Features ─── */
+.plan-features {
+  list-style: none;
+  flex-grow: 1;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.plan-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.feat-check {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(255, 87, 34, 0.12);
+  border: 1px solid rgba(255, 87, 34, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--accent-start);
+  margin-top: 1px;
+}
+
+/* ─── CTA Buttons ─── */
+.plan-cta {
+  width: 100%;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.plan-cta.btn-primary {
+  background: linear-gradient(90deg, var(--accent-start), var(--accent-end));
+  color: #000;
+  border: none;
+  box-shadow: 0 4px 20px rgba(255, 87, 34, 0.4);
+}
+
+.plan-cta.btn-primary:hover {
+  box-shadow: 0 6px 28px rgba(255, 87, 34, 0.6);
+}
+
+.plan-cta.btn-outline {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--surface-border);
+}
+
+.plan-cta.btn-outline:hover {
+  border-color: var(--accent-start);
+  color: var(--accent-start);
+  background: rgba(255, 87, 34, 0.05);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 900px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

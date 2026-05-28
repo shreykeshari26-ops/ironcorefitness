@@ -1,0 +1,138 @@
+.testimonials {
+  padding: 100px 0;
+  background-color: var(--bg-obsidian);
+  background-image: radial-gradient(circle at center, rgba(255,87,34,0.05) 0%, transparent 70%);
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 20px 40px;
+}
+
+.carousel-track {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.testimonial-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out, opacity 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.testimonial-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.testimonial-card {
+  padding: 40px 32px;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+.quote-mark {
+  font-family: var(--font-heading);
+  font-size: 5rem;
+  line-height: 0;
+  color: var(--accent-start);
+  opacity: 0.3;
+  margin-bottom: 24px;
+}
+
+.testimonial-text {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.testimonial-author {
+  color: var(--text-secondary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--surface-card);
+  border: 1px solid var(--surface-border);
+  color: var(--text-primary);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background: var(--accent-start);
+  color: var(--bg-obsidian);
+}
+
+.carousel-btn.prev {
+  left: 0;
+}
+
+.carousel-btn.next {
+  right: 0;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--surface-border);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background: var(--accent-start);
+  transform: scale(1.2);
+}
+
+@media (max-width: 600px) {
+  .carousel-container {
+    padding: 20px 0;
+  }
+  .carousel-btn {
+    display: none;
+  }
+  .carousel-track {
+    height: 350px;
+  }
+}

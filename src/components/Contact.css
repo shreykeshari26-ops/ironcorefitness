@@ -1,0 +1,303 @@
+.contact {
+  padding: 110px 0;
+  background-color: var(--bg-obsidian);
+  position: relative;
+}
+
+/* ─── Grid ─── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 40px;
+  margin-top: 56px;
+  align-items: start;
+}
+
+/* ─── Info Column ─── */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-map-embed {
+  padding: 0;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 22px;
+  border-radius: 12px;
+  transition: border-color 0.2s ease;
+}
+
+.info-card:hover {
+  border-color: rgba(255, 87, 34, 0.3);
+}
+
+.info-icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255, 87, 34, 0.1);
+  border: 1px solid rgba(255, 87, 34, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.info-icon {
+  color: var(--accent-start);
+}
+
+.info-text h4 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.info-text a {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  transition: color 0.2s;
+}
+
+.info-text a:hover {
+  color: var(--accent-start);
+}
+
+.quality-badge {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 22px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(255,87,34,0.08), rgba(255,179,0,0.04));
+  border-color: rgba(255, 87, 34, 0.2) !important;
+}
+
+.quality-star {
+  font-size: 2rem;
+  color: var(--accent-end);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.quality-badge strong {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.quality-badge p {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* ─── Form Panel ─── */
+.contact-form-wrapper {
+  padding: 40px 44px;
+  border-radius: 16px;
+}
+
+.form-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--surface-border);
+}
+
+.form-title-icon {
+  color: var(--accent-start);
+}
+
+.form-title-row h3 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ─── Form Groups ─── */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--surface-border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  resize: vertical;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--accent-start);
+  box-shadow: 0 0 0 3px rgba(255, 87, 34, 0.12);
+}
+
+.form-group.has-error input,
+.form-group.has-error textarea {
+  border-color: #ef4444;
+}
+
+.field-error {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78rem;
+  color: #ef4444;
+}
+
+/* ─── Dual Action Row ─── */
+.dual-action-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.email-btn {
+  background: linear-gradient(90deg, var(--accent-start), var(--accent-end));
+  color: #000;
+  box-shadow: 0 4px 18px rgba(255, 87, 34, 0.35);
+}
+
+.email-btn:hover {
+  box-shadow: 0 6px 24px rgba(255, 87, 34, 0.55);
+}
+
+.whatsapp-btn {
+  background: #25D366;
+  color: #fff;
+  box-shadow: 0 4px 18px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-btn:hover {
+  background: #1ebe5d;
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 960px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-form-wrapper {
+    padding: 32px 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dual-action-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─── Selected Plan Banner ─── */
+.selected-plan-label {
+  background: linear-gradient(90deg, var(--accent-start), var(--accent-end));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-style: normal;
+}
+
+.selected-plan-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, rgba(255,87,34,0.12), rgba(255,179,0,0.06));
+  border: 1px solid rgba(255, 87, 34, 0.35);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.selected-plan-banner svg {
+  color: var(--accent-end);
+  flex-shrink: 0;
+}
+
+.selected-plan-banner strong {
+  color: var(--text-primary);
+}
+
+.clear-plan-btn {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  transition: color 0.2s, background 0.2s;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.clear-plan-btn:hover {
+  color: var(--text-primary);
+  background: rgba(255,255,255,0.08);
+}
